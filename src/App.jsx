@@ -1,19 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Navbar from './components/navbar/navbar'
-import carWidget from './components/CarWidget/CarWidget'
+import { BrowserRouter , Route, Routes } from 'react-router-dom';
+import Navbar from './components/navbar/navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemCount from './components/ItemCount/ItemCount'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetatilContainer'
 
 
 
 
 function App() {
     return (
-      <div>
+      <>
+      <BrowserRouter>
         <Navbar />
-        <ItemListContainer greeting={'¡lAS MEJORES PROTEINAS Y CREATINAS DEL MERCADO AL MEJOR PRECIO!'}/>
-      </div>
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting={'¡LAS MEJORES PROTEINAS Y CREATINAS DEL MERCADO AL MEJOR PRECIO!'}/>}/>
+          <Route path='/category/:categoryId' element={<ItemListContainer greeting={'Productos filtrados'}/>}/>
+          <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
+          
+        </Routes>
+        </BrowserRouter>
+        
+      </>
       
       
     )
