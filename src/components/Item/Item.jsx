@@ -8,7 +8,7 @@ const Item = ({ id,image, name,category, price }) => {
             <img  style={{ width: '200px' }} src={image} />
             <h3>{category}</h3>
             <h3>price: ${price}</h3>
-            <Link to={`/item/${id}`}>Ver detalle</Link>
+            <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to={`/item/${id}`}>Ver detalle</Link>
         </div>
     )
 }
