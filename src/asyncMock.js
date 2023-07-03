@@ -8,6 +8,7 @@ const products = [
     price: 369000,
     image: "../src/assets/gold-standard-5-lb-1.webp",
     id: "1",
+    stock:25,
     category:'Limpia'
   },
   {
@@ -146,7 +147,7 @@ export const getProductsById = (productId) => {
   return new Promise((resolve) => {
       setTimeout(() => {
           resolve(products.find(prod => prod.id === productId))
-      }, 1500)
+      }, 500)
   })
 }
 
@@ -154,7 +155,9 @@ export const getProductsByCategory = (categoryId) => {
   return new Promise((resolve) => {
       setTimeout(() => {
           resolve(products.filter(prod => prod.category === categoryId))
-      }, 1500)
+      }, 500)
   })
 }
+
+
   

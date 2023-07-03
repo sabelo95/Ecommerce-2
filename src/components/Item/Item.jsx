@@ -5,10 +5,10 @@ const Item = ({ id,image, name,category, price }) => {
     return (
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid rgb(64, 63, 63)', padding:'10px' }} >
             <h3>{name}</h3>
-            <img  style={{ width: '200px' }} src={image} />
+            <img  style={{ width: '200px' }} src={image} alt='proteina'/>
             <h3>{category}</h3>
             <h3>price: ${price}</h3>
-            <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to={`/item/${id}`}>Ver detalle</Link>
+            <Link className='btn btn-dark' to={`/item/${id}`}>Ver detalle</Link>
         </div>
     )
 }
