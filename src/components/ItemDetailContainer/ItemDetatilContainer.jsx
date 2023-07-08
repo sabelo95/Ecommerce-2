@@ -36,16 +36,7 @@ const ItemDetailContainer = () => {
         .finally(()=>{
             setLoading(false)
         })
-        // setLoading(true)
-        // getProductsById(itemId)
-        // .then(response => {
-        //     setProduct(response)
-        // })
-        // .catch(error => {
-        //     console.error(error)
-        // })
-        // .finally(()=> {
-        //     setLoading(false)})
+        
     },[itemId])
 
     if(loading) {
