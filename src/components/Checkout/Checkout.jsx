@@ -90,7 +90,7 @@ const Checkout = () => {
   }
 
   const onSubmit = (data) => {
-    //setData(JSON.stringify(data));
+    
     createOrder(data);
   };
 
